@@ -35,12 +35,27 @@ export default defineConfig(({ mode }) => {
           // 全局属性值
           globalsPropValue: true
         },
-        resolvers: [ElementPlusResolver()]
+        resolvers: [
+          ElementPlusResolver({
+            importStyle: "sass"
+          })
+        ]
       }),
       Components({
-        resolvers: [ElementPlusResolver()]
+        resolvers: [
+          ElementPlusResolver({
+            importStyle: "sass"
+          })
+        ]
       })
     ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@use "@/styles/element-var.scss" as *;`
+        }
+      }
+    },
     resolve: {
       alias: {
         "@": resolve(__dirname, "./src")

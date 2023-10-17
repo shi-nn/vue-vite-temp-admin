@@ -1,8 +1,8 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import ElementPlus from "element-plus";
-import piniaPluginPersist from "pinia-plugin-persistedstate";
 import * as ElementPlusIconsVue from "@element-plus/icons-vue";
+import piniaPluginPersist from "pinia-plugin-persistedstate";
 
 import "@/styles/index.scss";
 
